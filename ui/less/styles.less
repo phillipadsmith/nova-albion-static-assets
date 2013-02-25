@@ -1,0 +1,420 @@
+@import 'bootstrap.less';
+@import 'responsive.less';
+
+/* Variables */
+@darkBlue: #285058;
+@lightBlue: #e9edee;
+@medBlue: #547678;
+@altBlue: #52737c;
+@darkGreen: #598700;
+@medGreen: #accc4f;
+@paleGreen: #dce9be;
+@lightGreen: #eef3dd;
+@limeGreen: #7FAD17;
+@gray: #7A7979;
+@lightGray: rgb(240,240,240);
+@bodyText: #303030;
+@bodyHead: #141414;
+@authorText: #568C00;
+@greyText: #7A7979;
+@editorText: #575756;
+@blockHeaders: #093742;
+@articleHeaders: #628C00;
+@articleDesc: #575756;
+@linkText: #083643;
+@fontBlockHeaders: "futura-pt", Arial, sans-serif;
+@labelLiberal: #DC2300;
+@labelConservative: #084A99;
+@labelGreen: #008000;
+@labelNdp: #FF8733;
+
+/* Bootstrap overrides */
+
+body {
+    font-family: "Lucida Grande", Verdana, sans-serif;
+    background: #e3e3e3;
+}
+
+#content {
+    background: white;
+}
+#front #content {
+    padding-top: 20px;
+}
+
+#content-main {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#content-sidebar {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#breadcrumb {
+    background: white;
+}
+
+h1, h2, h3, h4 {
+  font-family: "franklin-gothic-urw-cond",sans-serif;
+}
+
+/* Labels */
+
+.label-liberal {
+    background-color: @labelLiberal;
+}
+.label-conservative {
+    background-color: @labelConservative;
+}
+.label-green {
+    background-color: @labelGreen;
+}
+.label-ndp {
+    background-color: @labelNdp;
+}
+
+header {
+    background: url('/ui/img/tyee-logo.png') rgba(255,255,255,0.35) no-repeat 10px 10px;
+}
+
+header #map {
+    z-index: -1;
+}
+
+#map { height: 100px; }
+
+/* Alert boxes */
+
+.alert-success {
+    background: @lightGreen;
+    color: @limeGreen;
+}
+
+.table-bordered {
+  -webkit-border-top-left-radius:0px 0px 4px 4px;
+  border-radius: 0px 0px 4px 4px;
+  -moz-border-radius: 0px 0px 4px 4px;
+} 
+.table-bordered caption + thead tr:first-child th:first-child,
+.table-bordered caption + tbody tr:first-child td:first-child,
+.table-bordered colgroup + thead tr:first-child th:first-child,
+.table-bordered colgroup + tbody tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+}
+
+table caption {
+    background: @darkBlue;
+    color: white;
+    text-transform: uppercase;
+    font-family: @fontBlockHeaders;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#race #incumbent {
+    min-height: 120px;
+    border-left: 1px solid @lightGray;
+    padding-left: 20px;
+}
+#race #incumbent h3 {
+    line-height: 0px;
+    margin-bottom: 18px;
+}
+
+#race #incumbent img {
+    float: left;
+    margin-right: 10px;
+}
+
+#race #candidates {
+}
+
+.thumbnail {
+    display: inline;
+    border: none;
+    img {
+        margin: 0;
+        display: inline;
+    }
+}
+
+.thumbnails > li {
+    margin-left: 0;
+}
+
+#riding-summary {
+    margin-top: 20px;
+}
+
+#footer {
+    background: @lightGray;
+    color: @gray;
+}
+.copyright {
+    text-align: center;
+}
+
+.advertisement {
+    text-align: center;
+}
+.advertisement p.small {
+    color: @lightGray;
+    font-size: 0.8em;
+}
+
+
+
+/* Block styling */
+
+
+div.recent {
+    margin: 13px 0 13px 0;
+    padding-top: 1px;
+}
+
+div.recent p {
+    font-size: .9em;
+    color: @articleDesc;
+}
+
+div.recent ul {
+    list-style: none;
+    padding: 0 0 15px 0;
+    margin: 0;
+}
+
+
+div.recent ul li {
+    margin: 0 10px 10px 10px;
+}
+div.recent ul li a {
+    font-style: normal;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: @articleHeaders;
+}
+div.recent h3 {
+    font-family: "futura-pt", Arial, sans-serif;
+    text-transform: uppercase;
+    text-indent: 10px;
+    color: @blockHeaders;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+div.recent ul li {
+    border-bottom: 1px dotted rgb(200,200,200);
+    clear: both;
+    margin: 0 10px 10px 10px;
+}
+div.recent ul li a {
+    font-style: normal;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: @darkGreen;
+}
+
+div.recent ul li img {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+div.thetyee {
+    background: url('/ui/img/box_green_top.png') repeat-x top left @lightGreen;
+}
+div.thetyee ul {
+    background: url('/ui/img/box_green_bottom.png') repeat-x bottom left;
+}
+div.thetyee h3 {
+    color: @darkBlue;
+    border-bottom: 1px solid @medGreen;
+}
+
+body#front header {
+    background: none;
+}
+body#front header h1 {
+    background: url('/ui/img/tyee-logo.png') white no-repeat center 10px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    text-indent: -5000px;
+}
+#section-title {
+    background: @darkBlue;
+    padding: 0;
+    color: white; 
+    text-align: center;
+   
+}
+
+#section-title h2 {
+    color: white;
+    font-size: 1.6em;
+    padding: 0;
+    margin: 0;
+}
+
+body#front #map { height: 600px; }
+body#front .info {
+    padding: 10px;
+    font: 16px/18px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    height: 230px;
+    width: 300px
+}
+body#front .info h4 {
+    color: @darkBlue;
+    text-shadow: 1px 1px @lightGray;
+}
+
+body#front .info h5 {
+    color: @darkBlue;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+body#front .search {
+    padding: 10px;
+    font: 16px/18px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 300px
+}
+
+ul#region {
+    float: right;
+    font-size: 0.9em;
+}
+
+form#riding-search {
+    z-index: 1;
+}
+
+form#riding-search-mobile {
+    margin-bottom: 0;
+}
+
+.riding-search-mobile {
+    margin-top: 20px;
+}
+
+#riding-list {
+    background: white;
+}
+
+#riding-list div {
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+}
+#riding-list h3 {
+    line-height: 1.2em;
+}
+
+#riding-list ul {
+    list-style: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+#riding-list ul li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+#riding-list ul li a:after {
+    content: ', ';
+}
+
+#riding-list ul li.last a:after {
+    content: '.';
+}
+/* Fix for Geo.Search CSS conflict with Boostrap */
+
+.leaflet-container .leaflet-control-geosearch input {
+    margin-bottom: 0px;
+}
+
+#sharing {
+    margin: 4px 0 4px 0;
+}
+.btn_twitter, .btn_facebook, .btn_google {
+    float: right;
+    margin: 0 0 0 4px;
+    padding: 0;
+}
+// Responsive: Large desktop and up
+// --------------------------------------------------
+@media (min-width: 1200px) {
+}
+
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media (max-width: 767px) {
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    body#front #map { height: 200px; }
+    body#front .info { display: none; }
+}
+
+// Responsive: Up to landscape phone
+// --------------------------------------------------
+@media (max-width: 480px) {
+     header {
+        background: url('/ui/img/tyee-logo.png') rgba(255,255,255,0.4) no-repeat center 10px;
+    }
+
+}
+
+// Responsive: Small tablets
+// --------------------------------------------------
+@media (min-width: 480px) and (max-width: 640px) {
+
+
+}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+    .row-fluid .span4 {
+        display: block;
+        width: auto;
+        margin-left: 0;
+    }
+    .row-fluid .span8 {
+        width: 100%;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    /* Put your iPhone 4g styles in here */
+}
+
+/* Following Android targeting from:
+http://developer.android.com/guide/webapps/targeting.html
+http://pugetworks.com/2011/04/css-media-queries-for-targeting-different-mobile-devices/  */
+@media only screen and (-webkit-device-pixel-ratio:.75){
+    /* Put CSS for low density (ldpi) Android layouts in here */
+}
+@media only screen and (-webkit-device-pixel-ratio:1){
+    /* Put CSS for medium density (mdpi) Android layouts in here */
+}
+@media only screen and (-webkit-device-pixel-ratio:1.5){
+    /* Put CSS for high density (hdpi) Android layouts in here */
+}
+/* end Android targeting */
